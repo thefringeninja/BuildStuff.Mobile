@@ -10,5 +10,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Model.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\SpeakerDetailDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\SpeakerListDto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SpeakerListItemViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SpeakersListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SpeakersListView.xaml.cs">
+      <DependentUpon>SpeakersListView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SpeakersListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
